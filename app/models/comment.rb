@@ -1,5 +1,5 @@
 class Comment < ActiveRecord::Base
-	has_many :comments, dependent: :destroy
+	belongs_to :post
 	validates_presence_of :title
 	validates_presence_of :body
 end
